@@ -16,6 +16,7 @@
 // #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+    
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -35,6 +36,10 @@
     //         then-layer = <3>;
     //     };
     // };
+    &mt {
+        flavor = "tap-preferred";
+        tapping-term-ms = <500>;
+    };
 
     keymap {
         compatible = "zmk,keymap";
