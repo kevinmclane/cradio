@@ -27,6 +27,10 @@
             require-prior-idle-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
+         &mt {
+        flavor = "tap-preferred";
+        tapping-term-ms = <500>;
+    };
     };
 
     // conditional_layers {
@@ -36,10 +40,7 @@
     //         then-layer = <3>;
     //     };
     // };
-    &mt {
-        flavor = "tap-preferred";
-        tapping-term-ms = <500>;
-    };
+   
 
     keymap {
         compatible = "zmk,keymap";
