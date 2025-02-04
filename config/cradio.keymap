@@ -27,19 +27,18 @@
             require-prior-idle-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
+        rpi: require_prior_idle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
        
     };
-  &mt {
-            // compatible = "zmk,behavior-hold-tap";
-            // #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <1000>;
-            // bindings = <&kp>, <&kp>;
-            // hold-trigger-key-positions = <0>;
-            // hold-trigger-on-release;
-        };
+
     // conditional_layers {
     //     compatible = "zmk,conditional-layers";
     //     tri_layer {
@@ -58,12 +57,12 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-           &mt LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L &mt LGUI SQT
+           &rpi LALT A  &rpi 3 S    &rpi 2 D     &rpi 1 F    &kp G          &kp H     &rpi 1 J    &rpi 2 K     &rpi 3 L &rpi LGUI SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
-            &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &lt 1 FSLH
+            &rpi 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &rpi 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &mt LCTRL COMMA &mt LSHFT SPACE &mt LSHFT SPACE  &mt RALT DOT
+                                      &rpi LCTRL COMMA &rpi LSHFT SPACE &rpi LSHFT SPACE  &rpi RALT DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -75,7 +74,7 @@
             &kp TAB    &kp HOME   &kp UP     &kp END     &none          &none  &msc SCRL_LEFT &mmv MOVE_UP &msc SCRL_RIGHT &msc SCRL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans  &mt LCTRL LEFT &kp DOWN &mt LCTRL RIGHT &none     &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN
+            &trans  &rpi LCTRL LEFT &kp DOWN &rpi LCTRL RIGHT &none     &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
            &kp ENTER    &none   &kp LC(GRAVE) &kp ESC     &none         &none     &none     &none     &none     &none
@@ -97,7 +96,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp SEMI   &kp BSLH    &none     &kp LPAR   &kp RPAR      &kp COLON    &kp N1     &kp N2     &kp N3    &kp EQUAL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &mt LCTRL EQUAL &mt LSHFT ENTER &mt RSHFT ENTER &kp N0
+                                      &rpi LCTRL EQUAL &rpi LSHFT ENTER &rpi RSHFT ENTER &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -126,12 +125,12 @@
             &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans    &trans  &mt LCTRL SQT
+            &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans    &trans  &rpi LCTRL SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
             &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &mt LGUI COMMA  &trans        &trans     &trans
+                                          &rpi LGUI COMMA  &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
