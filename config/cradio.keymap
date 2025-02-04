@@ -18,15 +18,15 @@
 / {
     
     behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <500>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <0>;
-            bindings = <&kp>, <&kp>;
-        };
+        // ht: hold_tap {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <500>;
+        //     quick-tap-ms = <150>;
+        //     require-prior-idle-ms = <0>;
+        //     bindings = <&kp>, <&kp>;
+        // };
         rpi: require_prior_idle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
