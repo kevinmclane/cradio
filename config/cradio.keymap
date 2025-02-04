@@ -27,7 +27,9 @@
             require-prior-idle-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
-         &mt {
+       
+    };
+  &mt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -38,8 +40,6 @@
             hold-trigger-key-positions = <0>;
             hold-trigger-on-release;
         };
-    };
-
     // conditional_layers {
     //     compatible = "zmk,conditional-layers";
     //     tri_layer {
