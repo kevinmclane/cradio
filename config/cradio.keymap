@@ -18,15 +18,6 @@
 / {
     
     behaviors {
-        // ht: hold_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <500>;
-        //     quick-tap-ms = <150>;
-        //     require-prior-idle-ms = <0>;
-        //     bindings = <&kp>, <&kp>;
-        // };
         rpi: require_prior_idle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -60,9 +51,9 @@
            &rpi LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L &rpi LGUI SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
-            &rpi 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &rpi 1 FSLH
+            &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &lt 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &rpi LCTRL COMMA &rpi LSHFT SPACE &rpi LSHFT SPACE  &rpi RALT DOT
+                                      &mt LCTRL COMMA &mt LSHFT SPACE &mt LSHFT SPACE  &mt RALT DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -96,7 +87,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp SEMI   &kp BSLH    &none     &kp LPAR   &kp RPAR      &kp COLON    &kp N1     &kp N2     &kp N3    &kp EQUAL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &rpi LCTRL EQUAL &rpi LSHFT ENTER &rpi RSHFT ENTER &kp N0
+                                      &mt LCTRL EQUAL &mt LSHFT ENTER &mt RSHFT ENTER &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -130,7 +121,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
             &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &rpi LGUI COMMA  &trans        &trans     &trans
+                                          &mt LGUI COMMA  &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
