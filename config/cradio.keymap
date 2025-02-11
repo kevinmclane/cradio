@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
 // #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
@@ -27,7 +27,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-        rpii: require_prior_idle {
+        rpit: require_prior_idle_thumb {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -62,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
             &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &lt 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &rpii LCTRL COMMA &rpii LSHFT SPACE &rpii LSHFT SPACE  &rpii RALT DOT
+                                      &rpit LCTRL COMMA &rpit LSHFT SPACE &rpit LSHFT SPACE  &rpit RALT DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -96,7 +96,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp SEMI   &kp BSLH    &none     &kp LPAR   &kp RPAR      &kp COLON    &kp N1     &kp N2     &kp N3    &kp EQUAL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &mt LCTRL EQUAL &mt LSHFT ENTER &mt RSHFT ENTER &kp N0
+                                      &rpit LCTRL EQUAL &rpit LSHFT ENTER &rpit RSHFT ENTER &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -130,7 +130,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
             &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &mt LGUI COMMA  &trans        &trans     &trans
+                                          &rpit LGUI COMMA  &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
