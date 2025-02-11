@@ -27,6 +27,15 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        rpii: require_prior_idle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <50>;
+            bindings = <&kp>, <&kp>;
+        };
        
     };
 
@@ -53,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
             &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &lt 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &mt LCTRL COMMA &mt LSHFT SPACE &mt LSHFT SPACE  &mt RALT DOT
+                                      &rpii LCTRL COMMA &rpii LSHFT SPACE &rpii LSHFT SPACE  &rpii RALT DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
