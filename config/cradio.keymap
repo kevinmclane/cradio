@@ -62,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
             &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DELETE  &kp BSPC   &lt 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                      &rpit LCTRL COMMA &rpit LSHFT SPACE &rpit LSHFT SPACE  &rpit RALT DOT
+                                 &rpit LCTRL COMMA &rpit LSHFT SPACE &rpit RALT SPACE  &rpit LGUI DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -74,7 +74,7 @@
             &kp TAB    &kp HOME   &kp UP     &kp END     &none          &none  &msc SCRL_LEFT &mmv MOVE_UP &msc SCRL_RIGHT &msc SCRL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans  &rpi LCTRL LEFT &kp DOWN &rpi LCTRL RIGHT &none     &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN
+        &kp ESC  &rpi LCTRL LEFT &kp DOWN &rpi LCTRL RIGHT &none    &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
            &kp ENTER    &none   &kp LC(GRAVE) &kp ESC     &none         &none     &none     &none     &none     &none
@@ -91,7 +91,7 @@
             &kp GRAVE  &kp SQT      &none    &kp LBKT   &kp RBKT    &kp KP_DIVIDE  &kp N7     &kp N8     &kp N9    &kp MINUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp UNDER  &kp MINUS  &none     &kp LBRC   &kp RBRC    &kp KP_MULTIPLY &kp N4    &kp N5     &kp N6    &kp PLUS
+            &kp ENTER  &kp MINUS  &none     &kp LBRC   &kp RBRC    &kp KP_MULTIPLY &kp N4    &kp N5     &kp N6    &kp PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp SEMI   &kp BSLH    &none     &kp LPAR   &kp RPAR      &kp COLON    &kp N1     &kp N2     &kp N3    &kp EQUAL
