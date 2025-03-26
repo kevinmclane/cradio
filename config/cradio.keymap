@@ -60,9 +60,9 @@
            &rpi LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L &rpi LGUI SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
-            &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp SEMI  &kp BSPC   &lt 1 FSLH
+            &lt 1 Z     &kp X      &kp C      &kp V      &kp B          &kp N      &kp M    &kp DEL  &kp BSPC   &lt 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                 &rpit LCTRL COMMA &rpit LSHFT SPACE &rpit RALT SPACE  &rpit LGUI DOT
+                                 &rpit LCTRL COMMA    &kp LSHFT &rpit RALT SPACE  &rpit LGUI DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
