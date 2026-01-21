@@ -54,15 +54,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-          &rpi LGUI Q    &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+          &kp Q    &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   '      │
-           &rpi LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L &rpi LGUI SQT
+           &rpi LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L  &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
-            &lt 1 Z  &rpi LGUI X      &kp C      &kp V    &kp B          &kp N      &kp M    &kp DEL  &kp BSPC   &lt 1 FSLH
+            &lt 1 Z  &rpi LCTRL X  &kp C      &kp V    &rpi LCTRL B     &kp N      &kp M    &kp DEL  &kp BSPC   &lt 1 FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                 &rpit LCTRL COMMA &rpit LSHFT SPACE &rpit LGUI SPACE &rpit LALT DOT
+                                 &rpit LGUI COMMA &rpit LSHFT SPACE &rpit LCTRL SPACE &rpit LALT DOT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -74,12 +74,12 @@
             &kp TAB    &kp HOME   &kp UP    &kp END    &kp PAGE_UP          &none  &msc SCRL_LEFT  &none  &msc SCRL_RIGHT &msc SCRL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-    &rpi LALT ESC  &rpi LCTRL LEFT &kp DOWN &rpi LCTRL RIGHT &kp PAGE_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_DOWN
+    &rpi LCTRL ESC  &rpi LALT LEFT &kp DOWN &rpi LALT RIGHT &kp PAGE_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_DOWN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
            &none      &none     &kp LC(GRAVE) &kp ESC     &none         &none     &none     &none     &none       &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LCTRL &kp LSHFT        &mkp MB1  &mkp MB2
+                                             &kp LGUI &kp LSHFT        &mkp MB1  &mkp MB2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -96,7 +96,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none     &none      &none       &kp LPAR   &kp RPAR      &kp SEMI    &kp N1     &kp N2     &kp N3    &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &kp LCTRL &rpit LSHFT ENTER &rpit RSHFT ENTER &kp N0
+                                         &kp LGUI &rpit LSHFT ENTER &rpit RSHFT ENTER &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -111,28 +111,28 @@
          &studio_unlock &none   &kp PSCRN &kp C_VOL_DN &bt BT_SEL 1     &none     &kp F4     &kp F5     &kp F6    &kp F11
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-           &bootloader  &tog 4     &none   &bt BT_CLR &bt BT_SEL 2      &none     &kp F1     &kp F2     &kp F3     &kp F12
+           &bootloader  &none     &none   &bt BT_CLR &bt BT_SEL 2      &none     &kp F1     &kp F2     &kp F3     &kp F12
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp BSPC    &kp DEL       &kp BSPC    &kp DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        mac_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-          &rpi LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L  &rpi LCTRL SQT
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
-            &lt 1 Z     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &rpit LGUI COMMA  &trans        &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+        // mac_layer {
+        //     bindings = <
+        // //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        // //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+        //     &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        // //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        // //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
+        //   &rpi LALT A  &lt 3 S    &lt 2 D     &lt 1 F    &kp G          &kp H     &lt 1 J    &lt 2 K     &lt 3 L  &rpi LCTRL SQT
+        // //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        // //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │          │          │ / ?      │
+        //     &lt 1 Z     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
+        // //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                   &rpit LGUI COMMA  &trans        &trans     &trans
+        // //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //     >;
+        // };
     };
 };
