@@ -7,7 +7,9 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # Pinned to a known-good main commit so upstream churn can't break builds.
+      # Bump deliberately after verifying a newer commit builds.
+      revision: f2fa3905c8a1e2e8e033e9d3dbb98b2067e69e1f
       import: app/west.yml
   self:
     path: config
